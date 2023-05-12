@@ -4,15 +4,19 @@
 
 `global` routes
 / -> Home
-Join -> /join -> Join
+/join -> Join
 /login -> Login
 /search -> Search
 
 `user` rooutes
 /user/:id -> See User
+
 /user/logout -> Log Out
+
 /user/edit -> Edit My Profile
+
 /user/mypage -> My Page
+
 /user/delete -> Delete My Profile
 
 `music` routes
