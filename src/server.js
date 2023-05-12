@@ -3,7 +3,7 @@ import morgan from "morgan";
 import session from "express-session";
 import flash from "express-flash";
 import MongoStore from "connect-mongo";
-import { localsMiddleware } from "./middlewares";
+import { localsMiddleware, adminPrivateMiddleware } from "./middlewares";
 import rootRouter from "./routers/rootRouter";
 
 const app = express();
@@ -24,6 +24,7 @@ app.use(
 );
 app.use(flash());
 app.use(localsMiddleware);
+app.use(adminPrivateMiddleware);
 app.use("/uploads", express.static("uploads"));
 app.use("/static", express.static("assets"));
 

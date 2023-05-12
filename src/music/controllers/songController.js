@@ -1,6 +1,6 @@
 import request from "request";
 import Song from "../models/Song";
-import User from "../models/User";
+import User from "../../user/models/User";
 
 export const home = async (req, res) => {
   try {
