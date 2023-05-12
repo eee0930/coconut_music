@@ -4,7 +4,7 @@
 
 `global` routes
 / -> Home
-/join -> Join
+Join -> /join -> Join
 /login -> Login
 /search -> Search
 
