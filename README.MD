@@ -14,9 +14,7 @@
 /user/logout -> Log Out
 
 /user/edit -> Edit My Profile
-
 /user/mypage -> My Page
-
 /user/delete -> Delete My Profile
 
 `music` routes
