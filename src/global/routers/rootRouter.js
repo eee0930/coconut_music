@@ -3,17 +3,13 @@ import { home, posthome } from "../../music/controllers/songController";
 
 const rootRouter = express.Router();
 
-rootRouter.get("/", home);
-rootRouter.post("/", posthome);
+rootRouter.route("/").get(home).post(posthome);
 
-rootRouter.get("/join", home);
-rootRouter.post("/join", home);
+rootRouter.route("/join").get(home).post(posthome);
 
-rootRouter.get("/login", home);
-rootRouter.post("/login", home);
+rootRouter.route("/login").get(home).post(posthome);
 
-rootRouter.get("/search", home);
-rootRouter.post("/search", home);
+rootRouter.route("/search").get(home).post(posthome);
 
 
 export default rootRouter;

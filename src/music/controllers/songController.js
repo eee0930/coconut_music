@@ -14,7 +14,7 @@ export const home = async (req, res) => {
 
 export const posthome = async (req, res) => {
   request(
-    `https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=kpop&limit=50&api_key=${process.env.API_KEY}&format=json&period=7day`,
+    `${process.env.API_ROOT}?method=tag.gettoptracks&tag=kpop&limit=50&api_key=${process.env.API_KEY}&format=json&period=7day`,
     function (error, response, body) {
       if (!error && response.statusCode === 200) {
         const data = JSON.parse(body);
@@ -30,3 +30,4 @@ export const posthome = async (req, res) => {
   )
   return res.render("home", { pageTitle: "Home" });
 };
+ 

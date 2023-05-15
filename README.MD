@@ -1,4 +1,4 @@
-# Melon Contest Blueprint
+# Coconut Music
 
 ## Planning Routes
 
