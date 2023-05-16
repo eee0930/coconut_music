@@ -1,12 +1,17 @@
 import mongoose from "mongoose";
 
+const imageSchema = new mongoose.Schema({
+  "#text": String,
+  size: String,
+});
 const songSchema = new mongoose.Schema({
-  id: String,
-  title: String,
-  meta: {
-    views: Number,
-    rating: Number,
+  name: String,
+  artist: {
+    name: String,
   },
+  image: [imageSchema],
+  listener: String,
+  playcount: String,
 });
 
 const Song = mongoose.model("Song", songSchema);

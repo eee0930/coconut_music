@@ -7,5 +7,5 @@ block content
     +player
     div.listmusic
       ul.lists
-        each item, index in songs
-          +musiclist(item, index)
+        each track, index in topTracks
+          +musiclist(track, index)

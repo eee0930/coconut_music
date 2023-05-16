@@ -1,9 +1,9 @@
 import express from "express";
-import { getHome, posthome } from "../../song/controllers/songController";
+import { getHome } from "../../song/controllers/songController";
 
 const rootRouter = express.Router();
 
-rootRouter.route("/").get(getHome).post(posthome);
+rootRouter.get("/", getHome)
 
 // rootRouter.route("/join").get(getHome).post(posthome);
 
