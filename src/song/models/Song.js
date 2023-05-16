@@ -10,8 +10,9 @@ const songSchema = new mongoose.Schema({
     name: String,
   },
   image: [imageSchema],
-  listener: String,
+  listeners: String,
   playcount: String,
+
 });
 
 const Song = mongoose.model("Song", songSchema);
