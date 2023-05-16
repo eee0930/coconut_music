@@ -5,7 +5,7 @@ include mixins/player.pug
 block content
   div.container
     +player
-      div.listmusic
-        ul.lists
-          each item, index in songs
-            +musiclist(item, index)
+    div.listmusic
+      ul.lists
+        each item, index in songs
+          +musiclist(item, index)
