@@ -1,6 +1,8 @@
 // Config
 @import "./config/_variables.scss";
 @import "./config/_reset.scss";
+@import "./player.scss";
+@import "./listmusic.scss";
 
 // Components
 
@@ -26,66 +28,44 @@ body {
 /**
 */
 main {
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  main {
+    max-width: 600px;
+  }
+  header a .title {
+    font-size: 3rem;
+    color: $main;
+    font-weight: bold;
+    margin: 0.725rem 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: 800px;
+  }
+  header a .title {
+    margin: 1rem 5rem;
+  }
+}
+
 .container {
+  display: flex;
   margin-top: 2rem;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #202a42;
+  justify-content: center;
 }
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: $main;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin: 0.725rem;
 }
 
-.lists span {
-  color: $main;
-  font-weight: bold;
-}
-.list {
-  display: flex;
-  margin-bottom: 1.5rem;
-  justify-content: space-between;
-  align-items: center;
-}
-.list:last-child {
-  margin-bottom: 0;
-}
-
-.rightContainer {
-  display: flex;
-  gap: 30px;
-}
-
-.btn {
-  background-color: $main;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-.btn a {
-  color: white;
-  font-weight: bold;
-}
-
-.listnerTitle {
-  font-size: 0.825rem;
-  color: $text;
-}
-.listnercount {
-  font-weight: bold;
-  color: $text;
-}
 footer {
   color: $main;
   font-weight: bold;
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem;
 }

@@ -44,7 +44,6 @@
 - /music/comments/delete -> Delete A Comments of a Video
 
 ### `admin` routes
-
 - /admin/music/ -> Admin Music Index
 - /admin/music/theme -> Music Lists
 - /admin/music/theme/add -> Add Music Lists Theme

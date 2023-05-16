@@ -2,7 +2,7 @@ import request from "request";
 import Song from "../models/Song";
 import User from "../../user/models/User";
 
-export const home = async (req, res) => {
+export const getHome = async (req, res) => {
   try {
     const result = await Song.find({}).sort({ listners: -1 }).exec();
     const songs = JSON.parse(JSON.stringify(result));
