@@ -39,7 +39,6 @@
 - /music/:id/edit -> Edit Video
 - /music/:id/delete -> Delete Video
 - /music/upload -> Upload Video
-
 - /music/comments -> Comments on a Video
 - /music/comments/delete -> Delete A Comments of a Video
 
@@ -51,7 +50,6 @@
 - /admin/music/theme/list/add -> Add Music
 - /admin/music/theme/list/edit -> Edit Music
 - /admin/music/theme/list/delete -> Delete Music
-
 - /admin/user/ -> Admin User Index
 
 
