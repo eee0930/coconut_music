@@ -3,7 +3,7 @@ import "../scss/styles.scss";
 const $btn = document.querySelectorAll(".btn");
 const $player = document.querySelector(".player");
 $btn.forEach((value) => {
-  const youtubeId = value.getAttribute("data-id");
+  const youtubeId = value.getAttribute("data-youtube-id");
   value.addEventListener("click", () => {
     $player.innerHTML = `
       <div class="video_container">
