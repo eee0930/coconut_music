@@ -1,5 +1,6 @@
 # Coconut Music
 
+
 ## How to run?
 
 - Open this folder on VSCode.
@@ -10,10 +11,12 @@
 - Run `npm run dev:server`.
 - Open another terminal and run `npm run dev:assets`.
 
+
 ## How to deploy?
 
 - Run `npm run build`.
 - Run `npm start`.
+
 
 ## Planning Routes
 
