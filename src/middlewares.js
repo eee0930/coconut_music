@@ -1,15 +1,29 @@
+import multer from "multer";
+
 export const localsMiddleware = (req, res, next) => {
   res.locals.loggedIn = Boolean(req.session.loggedIn);
   res.locals.siteName = "Coconut Music";
   res.locals.loggedInUser = req.session.user || {};
+  res.locals.pathName = req.path;
   next();
 };
 
-export const adminPrivateMiddleware = (req, res, next) => {
-  const url = req.url;
-  if(url === '/admin') {
-    return res.send("<h1>Not Allowed.</h1>")
-  }
-  console.log("middleware is allowed")
-  next();
-}
+// export const publicMiddleware = (req, res, next) => {
+//   if (!req.session.loggedIn) {
+//     return next();
+//   } else {
+//     return res.redirect("/");
+//   }
+// };
+
+// export const adminPrivateMiddleware = (req, res, next) => {
+//   if (req.session.loggedIn) {
+//     return next();
+//   } else {
+//     return res.redirect("/login");
+//   }
+// };
+
+export const upleadFiles = multer({
+  dest: "uploads/"
+})

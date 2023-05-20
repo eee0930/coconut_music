@@ -10,7 +10,7 @@
   display: none;
 }
 .lists span {
-  color: $main;
+  color: $coco;
   font-weight: bold;
 }
 .list {
@@ -29,26 +29,26 @@
   gap: 30px;
 }
 .btn {
-  background-color: $main;
+  background-color: $coco;
   cursor: pointer;
   outline: none;
   border: none;
-  color: white;
+  color: $white;
   padding: 10px;
   border-radius: 10px;
 }
 .btn a {
-  color: white;
+  color: $white;
   font-weight: bold;
 }
 
 .listnerTitle {
   font-size: 0.825rem;
-  color: $text;
+  color: $black;
 }
 .listnercount {
   font-weight: bold;
-  color: $text;
+  color: $black;
 }
 
 @media (min-width: 768px) {

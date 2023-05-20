@@ -1,8 +1,9 @@
 mixin musiclist(track, index)
   li.list
-    span=`${index+1}. ${track.artist} - ${track.title}`
+    span=`${index+1}. ${track.artist.name} - ${track.name}`
     div.rightContainer
       div
-        img(src=`${track.albumImage}`)
-      button.btn(data-youtube-id=`${track.videoId}`)
+        h4.listnerTitle Listners
+        div.listnercount=`${track.listeners}`
+      button.btn
         i(class="fa-solid fa-music")

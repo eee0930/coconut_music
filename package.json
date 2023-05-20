@@ -6,7 +6,7 @@
     "start": "node build/init.js",
     "build": "npm run build:server && npm run build:assets",
     "build:server": "babel src -d build",
-    "build:assets": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
+    "build:assets": "webpack --mode=production",
     "dev:server": "nodemon",
     "dev:assets": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode=development -w"
   },
@@ -40,6 +40,7 @@
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.2",
+    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.5.0",
     "nodemon": "^2.0.7",
     "sass": "^1.32.10",

@@ -1,13 +1,19 @@
 import mongoose from "mongoose";
 
+const imageSchema = new mongoose.Schema({
+  "#text": String,
+  size: String,
+});
+
 const songSchema = new mongoose.Schema({
-  title: { type: String, required: true, trim: true },
-  artist: { type: String, required: true, trim: true },
-  albumImage: { type: String, trim: true },
-  youtube: { type: mongoose.Schema.Types.ObjectId, ref: "Youtube" },
+  name: String,
+  artist: {
+    name: String,
+  },
+  image: [imageSchema],
+  listener: String,
+  playcount: String,
 });
 
 const Song = mongoose.model("Song", songSchema);
-
 export default Song;
-

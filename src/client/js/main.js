@@ -7,10 +7,9 @@ $btn.forEach((value) => {
   value.addEventListener("click", () => {
     $player.innerHTML = `
       <div class="video_container">
-      <iframe class="youtube_player" src="https://www.youtube.com/embed/${youtubeId}?autoplay=1" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture;">
-      </iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/MSRcC626prw" title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
       </div>
     `;
   });

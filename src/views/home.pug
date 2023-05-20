@@ -1,11 +1,10 @@
-extends base
+extends layout/base
 include mixins/li.pug
-include mixins/player.pug
+include mixins/title.pug
 
 block content
-  div.container
-    +player
-    div.listmusic
-      ul.lists
-        each track, index in trackDetails
-          +musiclist(track, index)
+  +title(title)
+  div.listmusic
+    ul.lists
+      each track, index in topTracks
+        +musiclist(track, index)

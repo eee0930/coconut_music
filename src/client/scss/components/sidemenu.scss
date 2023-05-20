@@ -1,0 +1,16 @@
+.sidemenu-contianer {
+  padding: $def-padding-sm;
+  .sidemenu-cover {
+    border: $box-line;
+  }
+}
+
+@media(min-width: 1200px) {
+  .sidemenu-contianer {
+    padding: $def-padding;
+    min-height: 90vh;
+    .sidemenu-cover {
+      border: $box-line;
+    }
+  }
+}
