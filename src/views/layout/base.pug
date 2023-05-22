@@ -4,14 +4,12 @@ html(lang="ko")
     include ../partials/headIncl
   body
     div.row 
-      div.col-12.col-md-3.col-xl-2.d-none.d-md-inline-block
+      div.col-md-3.col-xl-2.d-none.d-md-inline-block
         include ../partials/sidemenu
-      div.col-12.col-md-9.col-xl-10.coco-container
-        include ../partials/header                
-        main
-          div.coco-container
-            block content
-            include ../partials/footer
+      div.coco-main-container.col-md-9.col-xl-10
+        main.coco-container
+          block content
+        include ../partials/footer
     include ../partials/cocoPlayer
     div.d-md-none
       include ../partials/sidemenu

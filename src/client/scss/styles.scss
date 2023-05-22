@@ -16,6 +16,7 @@
 // Example: @import "./screens/search.scss";
 
 // Defaults
+* {box-sizing: border-box;}
 a {
   color: inherit;
   text-decoration: none;
@@ -24,17 +25,24 @@ a {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: $whitel;
+  background-color: $white;
   color: $black;
+  overflow: hidden;
+  height: 100vh;
 }
-
+.coco-main-container {
+  overflow-y: auto;
+  max-height: calc(100vh - $player-h);
+}
+main {
+  min-height: 80vh;
+}
 .coco-container {
   padding: $def-padding-sm;
-  min-height: 90vh;
 }
 @media (min-width: 768px) {
   .coco-container {
-    padding: $def-padding-sm;
+    padding: $def-padding-md;
   }
 }
 
@@ -45,14 +53,102 @@ body {
 }
 .title {
   font-family: $font-title, cursive;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   word-spacing: 0.03em;
   font-stretch: 0.05em;
   line-height: 0.83;
 }
 
 footer {
-  color: $coco;
+  background-color: $whitel;
+  color: $white;
   font-weight: bold;
-  margin: 1.5rem;
+  padding: $def-padding-sm;
+  .ment {
+    font-family: $font-title, cursive;
+    color: $main4Side;
+    font-size: 10vmin;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    padding: $def-padding-md;
+    .ment {
+      margin-bottom: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    padding: $def-padding;
+    .ment {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  min-width: 50px;
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 1.125em 2.5em 0.9375em;
+
+  font-family: $font-title, cursive;
+  letter-spacing: -0.04em;
+  word-spacing: 0.03em;
+  font-stretch: 0.05em;
+  font-size: 1.2rem;
+  color: $white;
+
+  .button-back, .button-front {
+    width: 100%;
+    height: 100%;
+    padding: 1em 2.2em 0.7375em;
+    border: $box-line-sm;
+    display: block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    position: absolute;
+  }
+  .button-back {
+    background-color: $black;
+    top: 3px;
+    left: 3px;
+    z-index: 0;
+  }
+  .button-front {
+    background-color: $main11;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+  &:hover .button-front,
+  &:focus .button-front {
+    top: 1px;
+    left: 1px;
+  }
+}
+
+@media(min-width: 1200px) {
+
+
+}
+
+@keyframes bURGXq {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(20px, 20px);
+  }
 }

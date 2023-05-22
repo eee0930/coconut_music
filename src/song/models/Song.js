@@ -6,6 +6,7 @@ const imageSchema = new mongoose.Schema({
 });
 
 const songSchema = new mongoose.Schema({
+  id: String,
   name: String,
   artist: {
     name: String,

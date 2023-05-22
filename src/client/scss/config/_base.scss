@@ -398,9 +398,9 @@
 		max-width: 75%;
 	}
 	.col-xl-10 {
-		-ms-flex: 0 0 82%;
-		flex: 0 0 82%;
-		max-width: 82%;
+		-ms-flex: 0 0 83.333333%;
+		flex: 0 0 83.333333%;
+		max-width: 83.333333%;
 	}
 	.col-xl-11 {
 		-ms-flex: 0 0 91.666667%;
@@ -568,15 +568,15 @@ button:disabled {
 
 /* radio, checkbox */
 input.option-input, 
-input.topy-form, 
-textarea.topy-form,
+input.coco-form, 
+textarea.coco-form,
 select {
 	-webkit-appearance: none; 
 	-moz-appearance: none; 
 	appearance: none;
 }
 select {
-	// background-image: url('/images/common/icon/angle_down.svg') !important;
+	//background-image: url('/images/common/icon/angle_down.svg') !important;
 	background-size: 10px auto;
 	background-repeat: no-repeat;
 	background-position: calc(100% - 5px) center;
