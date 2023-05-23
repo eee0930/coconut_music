@@ -26,12 +26,13 @@
 - /login -> Login
 - /search -> Search
 
-#### `user` rooutes
-- /user/:id -> See User
-- /user/logout -> Log Out
-- /user/edit -> Edit My Profile
-- /user/mypage -> My Page
-- /user/delete -> Delete My Profile
+#### `member` rooutes
+- /member/:id -> See Member
+- /member/logout -> Log Out
+- /member/edit -> Edit My Profile
+- /member/mypage -> My Page
+- /member/delete -> Delete My Profile
+- /member/archive -> Play List Archive
 
 #### `music` routes
 - /music/:theme/list -> Music List By Theme
@@ -41,6 +42,9 @@
 - /music/upload -> Upload Video
 - /music/comments -> Comments on a Video
 - /music/comments/delete -> Delete A Comments of a Video
+
+#### `album` routes
+- /album/:id -> View Album Info
 
 #### `admin` routes
 - /admin/music/ -> Admin Music Index
