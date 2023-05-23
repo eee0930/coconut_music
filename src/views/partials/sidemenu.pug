@@ -1,17 +1,20 @@
 div.sidemenu-contianer 
   div.sidemenu-cover 
-    img(src="/public/client/img/coco.png")
+    img.jelly(src="/public/client/img/coco.png")
     div.animation-box-cover 
       span.animation-box
     div.side-menu
       div.title-cover
         div.title 
           a(href="/") coconut
+      //- 멤버정보 (member)
       //- div.user-section 
       //-   div.user-cover.row
       //-     div.profile.col-auto
       //-       img(src="/public/client/img/coco.png") 
       //-     div.col.nickname.align-self-center lazyhysong
+      
+      //- 로그인, 가입 (no member)
       div.login-cover.row 
         div.col-6.title 
           a(href="#") log in
@@ -34,7 +37,8 @@ div.sidemenu-contianer
           span.icon-cover
             i.fa-solid.fa-record-vinyl
           span 
-            a(href="/") mix tape 
+            a(href="/") mix tape
+        //- 보관함 (member) 
         //- li 
         //-   span.icon-cover
         //-     i.fa-solid.fa-heart

@@ -8,13 +8,13 @@ export const localsMiddleware = (req, res, next) => {
   next();
 };
 
-// export const publicMiddleware = (req, res, next) => {
-//   if (!req.session.loggedIn) {
-//     return next();
-//   } else {
-//     return res.redirect("/");
-//   }
-// };
+export const memberOnlyMiddleware = (req, res, next) => {
+  if (req.session.loggedIn) {
+    return next();
+  } else {
+    return res.redirect("/login");
+  }
+};
 
 // export const adminPrivateMiddleware = (req, res, next) => {
 //   if (req.session.loggedIn) {

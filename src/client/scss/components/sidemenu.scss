@@ -38,7 +38,8 @@
         top: -20px;
         left: -20px;
         pointer-events: none;
-        background-image: radial-gradient(rgb(26, 26, 26) 30%, transparent 30%), radial-gradient(rgb(26, 26, 26) 30%, transparent 30%);
+        background-image: radial-gradient(rgb(26, 26, 26) 30%, transparent 30%), 
+          radial-gradient(rgb(26, 26, 26) 30%, transparent 30%);
         background-position: 0px 0px, 20px 20px;
         background-size: 8px 8px;
         transition: inherit;
@@ -197,7 +198,33 @@
 
 // [Mobile ver.]----------------------------------------------------------------
 .mobile-menu-container {
-  background-color: $main11;
+  background-color: $main32;
   width: 100vw;
   height: $mobile-menu-h;
+  border-top: $box-line-sm;
+}
+.mobile-menu-cover {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  a { color: $blackl; }
+  a.active { color: $main12; }
+  .icon-cover {
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    position: relative;
+    .fa-music {
+      position: absolute;
+      font-size: 0.6em;
+      padding: 1px;
+      background-color: $main32;
+      bottom: 1px;
+      right: 35%;
+    }
+  }
+  .menu-name {
+    font-size: 0.8rem;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+  }
 }

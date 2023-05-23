@@ -6,34 +6,44 @@ div.coco-player-container
   //- [2. player controller]----------------------------------------------------
   div.controller-section.row 
     //- [2.1 앨범 정보]
-    div.album-info.col.row
+    div.song-info.col.row.align-self-center
+      //- 앨범 이미지
       div.album-image.col-auto.align-self-center
-        img(href="/public/client/img/default_paper.png", 
-          style="background-image: url(/public/client/img/test/idle.png)")
-      div.info.col-auto.align-self-center 
+        a(href="")
+          img(src="/public/client/img/default_paper.png", 
+            style="background-image: url(/public/client/img/test/idle.png)")
+      //- 노래 제목, 가수 이름
+      div.info.col.col-md-auto.align-self-center 
         div.name 
-        div.artist 
-      div.ect-button.col.align-self-center 
-        button.btn 
+          a(href="") 퀸카 (QueenCard)
+        div.artist  
+          a(href="") 아이들
+      //- 좋아요 (member)
+      div.loginRequired.ect-button.col-md.mobile-hidden.align-self-center 
+        button.btn(title="like") 
           i.fa-regular.fa-heart
+
     //- [2.2 플레이어 컨트롤러]
-    div.controller-cover.col-5.row
-      div.col-4.align-self-center
-        button.btn
-          i.fa-solid.fa-backward-step
-      div.col-4.align-self-center
-        button.play.btn 
-          i.fa-solid.fa-play
-        //- button.pause.btn 
-        //-   i.fa-solid.fa-pause
-      div.col-4.align-self-center
-        button.btn 
-          i.fa-solid.fa-forward-step
+    div.controller-cover.col-auto.align-self-center
+      //- 이전 곡
+      button.btn.mobile-hidden(title="prev")
+        i.fa-solid.fa-backward-step
+      //- 재생, 일시정지
+      button.play.btn(title="play") 
+        i.fa-solid.fa-play.jelly
+      //- button.pause.btn(title="pause")
+      //-   i.fa-solid.fa-pause.jelly
+      //- 다음 곡
+      button.btn(title="next") 
+        i.fa-solid.fa-forward-step
+
     //- [2.3 볼륨과 플레이리스트]
-    div.control-others.col.row 
-      div.volum-control.col-8.align-self-center
-      div.play-list.col-4.align-self-center 
-        button.btn.cocoPlayerList.play-list-icon
+    div.control-others.col-auto.col-md.row.align-self-center 
+      //- 볼륨 조절
+      div.volum-control.col-md-8.mobile-hidden.align-self-center
+      //- 플레이리스트 
+      div.play-list.col-12.col-md-4.align-self-center 
+        button.btn.cocoPlayerList.play-list-icon(title="play list")
           i.fa-solid.fa-bars
           i.fa-solid.fa-music
 

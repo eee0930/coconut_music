@@ -6,6 +6,7 @@ const BASE_JS = "./src/client/js/";
 module.exports = {
   entry: {
     main: BASE_JS + "main.js",
+    common: BASE_JS + "common.js",
     playCoco: BASE_JS + "app/playCoco.js",
   },
   plugins: [

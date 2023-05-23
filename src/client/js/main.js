@@ -21,4 +21,5 @@ function handleClickPlayerList() {
   
 }
 
-$cocoPlayerList.forEach((playerList) => playerList.addEventListener("click", handleClickPlayerList));
+$cocoPlayerList.forEach((playerList) => 
+  playerList.addEventListener("click", handleClickPlayerList));

@@ -1,3 +1,6 @@
+const $loginStatus = document.querySelector("#loginStatus");
+const $loginRequired = document.querySelectorAll(".loginRequired");
+
 /**
  * 로딩이미지 띄우기
  */
@@ -35,3 +38,22 @@ export function previewImagefile(e){
     reader.readAsDataURL(f);
   });
 }
+
+/**
+ * 로그인이 필요한 페이지의 링크를 클릭한 경우
+ * 로그인 여부 확인 후 로그인 페이지로 이동하기
+ * @returns 
+ */
+function handleLogin() {
+  if($loginStatus.innerHTML.length > 1 || 
+    $loginStatus.innerHTML  === "true"){
+    return;
+  } else {
+    e.preventDefault();
+    location.href = `/auth/login?destPage=${window.location.href}`;
+  }
+}
+
+$loginRequired.forEach((loginBtn) => 
+  loginBtn.addEventListener("click", handleLogin));
+

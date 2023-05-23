@@ -15,7 +15,7 @@
   border-bottom: $box-line-sm;
   width: 100%;
   background-color: #ffffff4d;
-  height: 10px;
+  height: 8px;
 
   .progress-bar {
     height: 100%;
@@ -26,31 +26,62 @@
 
 // [2. player controller]
 .controller-section {
-  height: calc(100% - 10px);
+  height: calc(100% - 8px);
   width: 100%;
-  .album-info {
+  // [2.1 앨범 정보]
+  .song-info {
     text-align: left;
+    padding: 0 0.5rem;
+    > div {
+      padding: 0 0.3rem;
+    }
+    .album-image {
+      img {
+        width: 45px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $main11;
+        border: none;
+        padding: 0;
+      }
+    }
+    .info {
+      color: $whitel;
+      .name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .artist {
+        font-size: 0.7rem;
+      }
+    }
   }
+
+  // [2.2 플레이어 컨트롤러]
   .controller-cover {
     text-align: center;
+
   }
+
+  // [2.3 볼륨과 플레이리스트]
   .control-others {
     text-align: right;
   }
+
   .btn {
     color: $white;
     font-size: 1.4rem;
     background-color: transparent;
     width: 40px;
     height: 40px;
+    text-align: center;
   }
   .btn.play, .btn.pause { 
     color: $main12; 
-    font-size: 2.5rem;
-    width: 60px;
-    height: 60px;
+    font-size: 1.6rem;
   }
-  
 }
 
 // [Tablet ver.]----------------------------------------------------------------
@@ -64,12 +95,29 @@
   .progress-bar-section {
     border-top: $box-line;
     border-bottom:  $box-line;
+    height: 10px;
   }  
-
   .controller-section {
-    
-  }
+    height: calc(100% - 10px);
 
+    // [2.2 플레이어 컨트롤러]
+    .controller-cover {
+      text-align: center;
+      .btn {margin: 0 5px;}
+      .btn.play i {margin-left: 5px;}
+    }
+
+    // [2.3 볼륨과 플레이리스트]
+    .control-others {
+      text-align: right;
+    }
+    
+    .btn.play, .btn.pause { 
+      font-size: 2.5rem;
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
 // [PC ver.]--------------------------------------------------------------------
