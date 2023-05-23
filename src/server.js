@@ -6,7 +6,7 @@ import MongoStore from "connect-mongo";
 
 import { localsMiddleware } from "./middlewares";
 import rootRouter from "./global/routers/rootRouter";
-import userRouter from "./user/routers/userRouter";
+import memberRouter from "./member/routers/memberRouter";
 import songRouter from "./song/routers/songRouter";
 
 
@@ -37,7 +37,7 @@ app.use("/static", express.static("assets"));
 app.use("/public", express.static("src"));
 
 app.use("/", rootRouter);
-app.use("/user", userRouter);
+app.use("/member", memberRouter);
 app.use("/music", songRouter);
 
 // app.use((req, res, next) => {

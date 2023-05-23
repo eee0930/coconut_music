@@ -1,33 +1,80 @@
-.player-container {
+// [Mobile ver.]----------------------------------------------------------------
+.coco-player-container {
+  position: fixed;
+  bottom: $mobile-menu-h;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: $player-h-sm;
+  background-color: rgba(97, 96, 154, 0.85);
+  backdrop-filter: blur(15px);
+}
+// [1. progress bar]
+.progress-bar-section {
+  border-top: $box-line-sm;
+  border-bottom: $box-line-sm;
   width: 100%;
-  height: 100%;
-  background-color: $main11;
+  background-color: #ffffff4d;
+  height: 10px;
 
-  .progress-bar-cover {
-    border-top: $box-line-sm;
-    border-bottom: $box-line-sm;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 10px;
-    .progress-bar {
-      height: 100%;
-      width: 30%;
-      background-color: $main2Side;
-    }
-  }  
+  .progress-bar {
+    height: 100%;
+    width: 30%;
+    background-color: $main2Side;
+  }
+}  
+
+// [2. player controller]
+.controller-section {
+  height: calc(100% - 10px);
+  width: 100%;
+  .album-info {
+    text-align: left;
+  }
   .controller-cover {
-    height: calc(100% - 10px);
+    text-align: center;
+  }
+  .control-others {
+    text-align: right;
+  }
+  .btn {
+    color: $white;
+    font-size: 1.4rem;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+  }
+  .btn.play, .btn.pause { 
+    color: $main12; 
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+}
+
+// [Tablet ver.]----------------------------------------------------------------
+@media(min-width: 768px) {
+  .coco-player-container {
+    position: static;
+    height: $player-h-md;
+    background-color: $main11;
+    backdrop-filter: none;
+  }
+  .progress-bar-section {
+    border-top: $box-line;
+    border-bottom:  $box-line;
+  }  
+
+  .controller-section {
+    
   }
 
 }
 
-@media(min-width: 768px) {
-  .player-container {
-   
-    .progress-bar-cover {
-      border-top: $box-line;
-      border-bottom:  $box-line;
-    }  
-
+// [PC ver.]--------------------------------------------------------------------
+@media(min-width: 1200px) {
+  .coco-player-container {
+    height: $player-h;
   }
 }

@@ -1,9 +1,0 @@
-mixin musiclist(track, index)
-  li.list
-    span=`${index+1}. ${track.artist.name} - ${track.name}`
-    div.rightContainer
-      div
-        h4.listnerTitle Listners
-        div.listnercount=`${track.listeners}`
-      button.btn
-        i(class="fa-solid fa-music")

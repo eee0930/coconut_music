@@ -5,7 +5,8 @@ div.sidemenu-contianer
       span.animation-box
     div.side-menu
       div.title-cover
-        div.title coconut
+        div.title 
+          a(href="/") coconut
       //- div.user-section 
       //-   div.user-cover.row
       //-     div.profile.col-auto
@@ -19,16 +20,37 @@ div.sidemenu-contianer
             span.button-back 
             span.button-front sign up
       ul.sidemenu
-        li
-          i.fa-solid.fa-house-chimney-window.fa-fw
-          span home 
+        li.active
+          span.icon-cover
+            i.fa-solid.fa-house-chimney-window
+          span 
+            a(href="/") home 
         li 
-          i.fa-solid.fa-trophy.fa-fw 
-          span chart 
+          span.icon-cover
+            i.fa-solid.fa-trophy 
+          span 
+            a(href="/") chart 
         li 
-          i.fa-solid.fa-record-vinyl.fa-fw
-          span mix tape 
+          span.icon-cover
+            i.fa-solid.fa-record-vinyl
+          span 
+            a(href="/") mix tape 
+        //- li 
+        //-   span.icon-cover
+        //-     i.fa-solid.fa-heart
+        //-   span 
+        //-     a(href="/") archive
         li 
-          i.fa-solid.fa-music.fa-fw
-          span play list
+          span.icon-cover
+            i.fa-solid.fa-bars
+            i.fa-solid.fa-music
+          span 
+            a(href="/") play list
+      
+      div.search-section 
+        div.search-cover
+          i.fa-solid.fa-magnifying-glass
+          form(action="") 
+            input(type="search", name="search", placeholder="search")
+
   

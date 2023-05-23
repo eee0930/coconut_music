@@ -1,4 +1,39 @@
-div.player-container
-  div.progress-bar-cover 
+div.coco-player-container
+  //- [1. progress bar]---------------------------------------------------------
+  div.progress-bar-section 
     div.progress-bar 
-  div.controller-cover  
+
+  //- [2. player controller]----------------------------------------------------
+  div.controller-section.row 
+    //- [2.1 앨범 정보]
+    div.album-info.col.row
+      div.album-image.col-auto.align-self-center
+        img(href="/public/client/img/default_paper.png", 
+          style="background-image: url(/public/client/img/test/idle.png)")
+      div.info.col-auto.align-self-center 
+        div.name 
+        div.artist 
+      div.ect-button.col.align-self-center 
+        button.btn 
+          i.fa-regular.fa-heart
+    //- [2.2 플레이어 컨트롤러]
+    div.controller-cover.col-5.row
+      div.col-4.align-self-center
+        button.btn
+          i.fa-solid.fa-backward-step
+      div.col-4.align-self-center
+        button.play.btn 
+          i.fa-solid.fa-play
+        //- button.pause.btn 
+        //-   i.fa-solid.fa-pause
+      div.col-4.align-self-center
+        button.btn 
+          i.fa-solid.fa-forward-step
+    //- [2.3 볼륨과 플레이리스트]
+    div.control-others.col.row 
+      div.volum-control.col-8.align-self-center
+      div.play-list.col-4.align-self-center 
+        button.btn.cocoPlayerList.play-list-icon
+          i.fa-solid.fa-bars
+          i.fa-solid.fa-music
+

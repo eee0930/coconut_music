@@ -2,6 +2,8 @@ import "../scss/styles.scss";
 
 const $btn = document.querySelectorAll(".btn");
 const $player = document.querySelector(".player");
+const $cocoPlayerList = document.querySelectorAll(".cocoPlayerList");
+
 $btn.forEach((value) => {
   const youtubeId = value.getAttribute("data-youtube-id");
   value.addEventListener("click", () => {
@@ -14,3 +16,9 @@ $btn.forEach((value) => {
     `;
   });
 });
+
+function handleClickPlayerList() {
+  
+}
+
+$cocoPlayerList.forEach((playerList) => playerList.addEventListener("click", handleClickPlayerList));
