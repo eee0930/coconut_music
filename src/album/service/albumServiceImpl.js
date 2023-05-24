@@ -9,8 +9,8 @@ export const getAlbumInfoByTrack = async (artist, name) => {
     let [albumTitle, imageSm, imageLg] = [];
     if(albumInfo) {
       albumTitle = albumInfo.title;
-      imageSm = image[0]["#text"];
-      imageLg = image[image.length - 1]["#text"];
+      imageSm = albumInfo.image[0]["#text"];
+      imageLg = albumInfo.image[image.length - 1]["#text"];
     } else {
       albumTitle = "No Title";
       imageSm = defaultImg;
