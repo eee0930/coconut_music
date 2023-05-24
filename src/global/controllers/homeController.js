@@ -15,7 +15,7 @@ export const getHome = async (req, res) => {
     const albumInfo = await getAlbumInfoByTrack(artist, name);
     const { albumTitle, imageSm, imageLg } = albumInfo;
     
-    return ({
+    return ({ 
       artist,
       name,
       rank,
