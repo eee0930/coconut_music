@@ -9,7 +9,7 @@ export const fetchTopTracks = async (limit) => {
     const data = response.json();
     const status = response.status;
     if(status === 200) {
-      return data.tracks;
+      return data;
     } else {
       console.log(status);
       return false;
@@ -27,7 +27,7 @@ export const fetchTrackInfo = async (artist, name) => {
     const data = response.json();
     const status = response.status;
     if(status === 200) {
-      return data.track;
+      return data;
     } else {
       console.log(status);
       return false;

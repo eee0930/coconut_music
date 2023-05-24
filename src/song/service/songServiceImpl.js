@@ -12,8 +12,8 @@ export const getSongById = (id) => {};
 export const getSongListByPage = (page) => {};
 
 export const getTopTrackList = async (limit) => {
-  const tracks = await fetchTopTracks(limit);
-  const topTracks = tracks.track;
+  const data = await fetchTopTracks(limit);
+  const topTracks = data.tracks.track;
   
   return topTracks;
 };
