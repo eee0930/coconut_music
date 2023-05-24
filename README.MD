@@ -43,6 +43,9 @@
 - /music/comments -> Comments on a Video
 - /music/comments/delete -> Delete A Comments of a Video
 
+#### `artist` routes
+- /artist/:id -> View Artist Info
+
 #### `album` routes
 - /album/:id -> View Album Info
 

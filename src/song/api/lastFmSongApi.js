@@ -9,7 +9,7 @@ export const fetchTopTracks = async (limit) => {
     const data = response.json();
     const status = response.status;
     if(status === 200) {
-      return data;
+      return data.tracks;
     } else {
       console.log(status);
       return false;
@@ -22,14 +22,12 @@ export const fetchTopTracks = async (limit) => {
 
 
 export const fetchTrackInfo = async (artist, name) => {
-  // artist = artist.split(" ").join("+");
-  // name = name.split(" ").join("+");
   try {
     const response = await fetch(`${API_ROOT}?method=track.getInfo&api_key=${API_KEY}&artist=${artist}&track=${name}&format=json`);
     const data = response.json();
     const status = response.status;
     if(status === 200) {
-      return data;
+      return data.track;
     } else {
       console.log(status);
       return false;

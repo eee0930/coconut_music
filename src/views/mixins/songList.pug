@@ -1,9 +1,9 @@
-mixin songList(track, index)
+mixin songList(topTrack)
   div.row 
-    div.album-image
-      img(src="/public/client/img/default_paper.png",
-        style=`background-image: url(${track.imageSm})`)
-    div.album-info=`${track.rank}`
+    div.album-info(style="border: solid 1px red") #{topTrack.rank}
     div.album-info 
-      div.name=`${track.name}`
-      div.artist=`${track.artist}`
+      div.name #{topTrack.name}
+      div.artist #{topTrack.artist}
+    div.album-image
+      //- img(src="/public/client/img/default_paper.png",
+      //-   style=`background-image: url(${topTrack.albumInfo.image[0]["#text"]})`)
