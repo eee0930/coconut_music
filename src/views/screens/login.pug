@@ -1,1 +1,5 @@
-extends ../layout/authLayout
+extends ../layout/authLayout 
+include ../mixins/title
+
+block content 
+  +title(title, "/")

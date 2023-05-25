@@ -16,6 +16,14 @@ export const memberOnlyMiddleware = (req, res, next) => {
   }
 };
 
+export const guestOnlyMiddleware = (req, res, next) => {
+  if (!req.session.loggedIn) {
+    return next();
+  } else {
+    return res.redirect("/");
+  }
+};
+
 // export const adminPrivateMiddleware = (req, res, next) => {
 //   if (req.session.loggedIn) {
 //     return next();
