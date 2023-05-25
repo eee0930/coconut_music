@@ -10,7 +10,7 @@ export const getAlbumInfoByTrack = async (artist, name) => {
     if(albumInfo) {
       albumTitle = albumInfo.title;
       imageSm = albumInfo.image[0]["#text"];
-      imageLg = albumInfo.image[image.length - 1]["#text"];
+      imageLg = albumInfo.image[albumInfo.image.length - 1]["#text"];
     } else {
       albumTitle = "No Title";
       imageSm = defaultImg;
@@ -25,3 +25,4 @@ export const getAlbumInfoByTrack = async (artist, name) => {
     console.log("에러다" + error);
   } 
 };
+

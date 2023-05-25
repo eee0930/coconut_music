@@ -1,9 +1,9 @@
 mixin songList(topTrack)
-  div.row 
+  div.track-ele-cover.row 
     div.album-info(style="border: solid 1px red") #{topTrack.rank}
     div.album-info 
       div.name #{topTrack.name}
       div.artist #{topTrack.artist}
     div.album-image
-      //- img(src="/public/client/img/default_paper.png",
-      //-   style=`background-image: url(${topTrack.albumInfo.image[0]["#text"]})`)
+      img.playlist-album-img(src="/public/client/img/default_paper.png",
+        style=`background-image: url(${topTrack.imageSm})`)

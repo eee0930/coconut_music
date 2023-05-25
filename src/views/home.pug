@@ -1,4 +1,4 @@
-extends layout/base
+extends layout/baseLayout
 include mixins/title.pug
 include mixins/songList.pug
 
@@ -35,6 +35,6 @@ block content
       div.col-12.col-md-6
         each topTrack in topTracks1
           +songList(topTrack)
-      //- div.col-12.col-md-6
-      //-   each topTrack in topTracks2
-      //-     +songList(topTrack)
+      div.col-12.col-md-6
+        each topTrack in topTracks2
+          +songList(topTrack)
