@@ -28,13 +28,13 @@ block content
       a(href="") 
         span top 10 this week
         i.fa-solid.fa-caret-right.fa-fw
-      //- div #{name1}
-      //- img(src="/public/client/img/default_paper.png",
-      //-   style=`background-image: url(${imageSm})`)
     div.main-chart-content.row 
       div.col-12.col-md-6
         each topTrack in topTracks1
-          +songList(topTrack)
+          +songList(topTrack, false)
       div.col-12.col-md-6
         each topTrack in topTracks2
-          +songList(topTrack)
+          +songList(topTrack, false)
+
+block scripts
+  

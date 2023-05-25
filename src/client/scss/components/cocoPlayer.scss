@@ -73,6 +73,16 @@
   }
 }
 
+.player-album-img {
+  width: 45px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $main11;
+  border: none;
+  padding: 0;
+}
+
 // [Tablet ver.]----------------------------------------------------------------
 @media(min-width: 768px) {
   .coco-player-container {

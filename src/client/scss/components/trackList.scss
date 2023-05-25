@@ -1,3 +1,67 @@
-.track-ele-cover {
+.track-ele-section {
+  padding: 5px;
+  background-color: transparent;
   margin-bottom: 5px;
+  &:hover {
+    background-color: $whitel;
+  }
+  &:hover .play-btn {
+    opacity: 1;
+  }
+}
+.track-ele-cover {
+  color: $blackd;
+  .album-image {position: relative;}
+  .play-btn {
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: $white;
+  }
+  
+  .checklist, .track-rank { width: 30px; }
+  .track-rank { 
+    text-align: center; 
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .album-info {
+    max-width: calc(100% - 115px);
+    > div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .name-cover {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+  }
+  .artist-cover {
+    font-size: 0.9rem;
+  }
+}
+.playlist-album-img {
+  width: 55px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $main11;
+  border: none;
+  padding: 0;
+}
+
+@media(min-width: 768px) {
+  .track-ele-cover {
+    padding-right: 0.5rem;
+  }
 }

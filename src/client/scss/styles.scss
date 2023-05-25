@@ -48,6 +48,9 @@ main {
   display: none;
 }
 @media (min-width: 768px) {
+  .baseLayout-menu {
+    width: 250px;
+  }
   .coco-container {
     padding: $def-padding-md;
   }
@@ -55,7 +58,15 @@ main {
     max-height: calc(100vh - $player-h-md);
   }
 }
+@media (min-width: 992px) {
+  .baseLayout-menu {
+    width: 270px;
+  }
+}
 @media (min-width: 1200px) {
+  .baseLayout-menu {
+    width: 300px;
+  }
   .coco-container {
     padding: $def-padding;
   }
@@ -161,17 +172,6 @@ footer {
     }
   }
 }
-
-.playlist-album-img {
-  width: 45px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: $main11;
-  border: none;
-  padding: 0;
-}
-
 
 
 // jelly button
