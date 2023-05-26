@@ -1,5 +1,5 @@
 mixin songList(track, check)
-  div.trackElement.track-ele-section
+  div.trackElement.track-ele-section(data-tid=track.tid)
     div.track-ele-cover.row 
       if check
         div.checklist.col-auto.align-self-center
@@ -8,12 +8,14 @@ mixin songList(track, check)
         img(src="/public/client/img/default_paper.png",
           style=`background-image: url(${track.image})` 
           class="playlist-album-img")
+        input.imgSrc(type="hidden" value=track.image)
         button(data-audio=track.preview, data-duration=track.duration 
           class="playCoco play-btn")
           i.fa-solid.fa-play
       if track.rank 
         div.track-rank.col-auto.align-self-center #{track.rank}
-      div.album-info.col.align-self-center
+      div.trackInfo.album-info.col.align-self-center(data-arid=track.arid,
+        data-name=track.name, data-artist=track.artist)
         div.name-cover  
           a.name(href="") #{track.name}
         div.artist-cover 

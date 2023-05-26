@@ -19,8 +19,9 @@
 
   .progress-bar {
     height: 100%;
-    width: 30%;
+    width: 0%;
     background-color: $main2Side;
+    transition: width 1s linear;
   }
 }  
 
@@ -51,12 +52,13 @@
   // [2.2 플레이어 컨트롤러]
   .controller-cover {
     text-align: center;
-
   }
 
   // [2.3 볼륨과 플레이리스트]
   .control-others {
     text-align: right;
+    color: $whitel;
+    font-size: 0.8rem;
   }
 
   .btn {

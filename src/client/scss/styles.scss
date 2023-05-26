@@ -173,6 +173,14 @@ footer {
   }
 }
 
+.likeBtn.liked .fa-solid.fa-heart {
+  color: $main12;
+}
+.likeBtn.active i {
+  color: $main12;
+  animation: bigToSmall 0.5s ease;
+}
+
 
 // jelly button
 .jelly:hover, .jelly:active {
@@ -210,12 +218,25 @@ footer {
 }
 
 /* box dots animation */
+@-webkit-keyframes bURGXq {
+  0% {-webkit-transform: translate(0px, 0px);}
+  100% {-webkit-transform: translate(20px, 20px);}
+}
 @keyframes bURGXq {
-  0% {
-    transform: translate(0px, 0px);
-  }
+  0% {transform: translate(0px, 0px);}
+  100% {transform: translate(20px, 20px);}
+}
 
-  100% {
-    transform: translate(20px, 20px);
-  }
+/* big-> small (하투 애니메이션) */
+@-webkit-keyframes bigToSmall {
+	0%, 100% {-webkit-transform: scale(1);}
+	40% {-webkit-transform: scale(0.1);}
+	70%, 75% {-webkit-transform: scale(3);}
+	90% {-webkit-transform: scale(0.5);}
+}
+@keyframes bigToSmall {
+	0%, 100% {transform: scale(1);}
+	40% {transform: scale(0.1);}
+	70%, 75% {transform: scale(3);}
+	90% {transform: scale(0.5);}
 }

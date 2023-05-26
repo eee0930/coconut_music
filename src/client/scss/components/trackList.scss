@@ -40,14 +40,16 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      line-height: 1.2;
     }
   }
   .name-cover {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
     margin-bottom: 3px;
   }
   .artist-cover {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 .playlist-album-img {
