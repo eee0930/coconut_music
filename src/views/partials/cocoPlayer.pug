@@ -1,7 +1,7 @@
-div.coco-player-container
+div#cocoPlayerContainer.coco-player-container
   //- [1. progress bar]---------------------------------------------------------
   div.progress-bar-section 
-    div.progress-bar 
+    div#playerProgress.progress-bar(data-duration=161) 
 
   //- [2. player controller]----------------------------------------------------
   div.controller-section.row 
@@ -9,38 +9,42 @@ div.coco-player-container
     div.song-info.col.row.align-self-center
       //- 앨범 이미지
       div.album-image.col-auto.align-self-center
-        a(href="")
-          img.playlist-album-img(src="/public/client/img/default_paper.png", 
-            style="background-image: url(/public/client/img/test/idle.png)")
+        a.albumImg(href="/album/441690797")
+          img(src="/public/client/img/default_paper.png", 
+            style="background-image: url('https://e-cdns-images.dzcdn.net/images/cover/14ae5e519293803d00429ba2e401097c/56x56-000000-80-0-0.jpg')"
+            class="player-album-img")
       //- 노래 제목, 가수 이름
       div.info.col.col-md-auto.align-self-center 
-        div.name 
-          a(href="") 퀸카 (QueenCard)
-        div.artist  
-          a(href="") 아이들
+        div.name-cover 
+          a.name(href="/song/2284968167") 
+            span Queencard
+        div.artist-cover  
+          a.artist(href="/artist/15065941") 
+            span (G)I-DLE
       //- 좋아요 (member)
-      div.loginRequired.ect-button.col-md.mobile-hidden.align-self-center 
-        button.btn(title="like") 
+      div.ect-button.col-md.mobile-hidden.align-self-center 
+        button.likeBtn.btn(data-tid="2284968167", title="like") 
           i.fa-regular.fa-heart
 
     //- [2.2 플레이어 컨트롤러]
     div.controller-cover.col-auto.align-self-center
       //- 이전 곡
-      button.btn.mobile-hidden(title="prev")
+      button#prevBtn.btn.mobile-hidden(title="prev")
         i.fa-solid.fa-backward-step
       //- 재생, 일시정지
-      button.play.btn(title="play") 
+      button#cocoPlayBtn.play.btn 
         i.fa-solid.fa-play.jelly
-      //- button.pause.btn(title="pause")
-      //-   i.fa-solid.fa-pause.jelly
       //- 다음 곡
-      button.btn(title="next") 
+      button#nextBtn.btn(title="next") 
         i.fa-solid.fa-forward-step
-
+    input#cocoPlayUrl(type="hidden", value="https://cdns-preview-7.dzcdn.net/stream/c-79bf9b800bc2ebf658fe627ab1c1a6f8-4.mp3")
     //- [2.3 볼륨과 플레이리스트]
     div.control-others.col-auto.col-md.row.align-self-center 
-      //- 볼륨 조절
+      //- 플레이시간
       div.volum-control.col-md-8.mobile-hidden.align-self-center
+        span#playTime 00:00
+        span /
+        span#durationTime 02:41
       //- 플레이리스트 
       div.play-list.col-12.col-md-4.align-self-center 
         button.btn.cocoPlayerList.play-list-icon(title="play list")

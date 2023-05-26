@@ -1,5 +1,6 @@
-mixin title(title)
-  div.title-container
-    span.title-animation 
-    div.title-cover 
-      h1.title=`${title}`
+mixin title(title, url)
+  div.box-container
+    span.box-animation 
+    div.box-cover 
+      a(href=`${url? url : '#'}`) 
+        h1.title #{title}

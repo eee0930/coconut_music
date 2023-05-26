@@ -44,7 +44,7 @@ export function previewImagefile(e){
  * 로그인 여부 확인 후 로그인 페이지로 이동하기
  * @returns 
  */
-function handleLogin() {
+function handleLogin(e) {
   if($loginStatus.innerHTML.length > 1 || 
     $loginStatus.innerHTML  === "true"){
     return;

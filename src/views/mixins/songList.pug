@@ -1,9 +1,22 @@
-mixin songList(topTrack)
-  div.row 
-    div.album-info(style="border: solid 1px red") #{topTrack.rank}
-    div.album-info 
-      div.name #{topTrack.name}
-      div.artist #{topTrack.artist}
-    div.album-image
-      //- img(src="/public/client/img/default_paper.png",
-      //-   style=`background-image: url(${topTrack.albumInfo.image[0]["#text"]})`)
+mixin songList(track, check)
+  div.trackElement.track-ele-section(data-tid=track.tid)
+    div.track-ele-cover.row 
+      if check
+        div.checklist.col-auto.align-self-center
+          input(type="checkbox", value=track.tid, name="trackList", class="option-input checkbox")
+      div.albumImg.album-image.col-auto.align-self-center(data-alid=track.alid)
+        img(src="/public/client/img/default_paper.png",
+          style=`background-image: url(${track.image})` 
+          class="playlist-album-img")
+        input.imgSrc(type="hidden" value=track.image)
+        button(data-audio=track.preview, data-duration=track.duration 
+          class="playCoco play-btn")
+          i.fa-solid.fa-play
+      if track.rank 
+        div.track-rank.col-auto.align-self-center #{track.rank}
+      div.trackInfo.album-info.col.align-self-center(data-arid=track.arid,
+        data-name=track.name, data-artist=track.artist)
+        div.name-cover  
+          a.name(href="") #{track.name}
+        div.artist-cover 
+          a.artist(href="") #{track.artist}

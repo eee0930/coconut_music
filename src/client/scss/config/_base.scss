@@ -565,7 +565,14 @@ button:disabled {
 }
 .align-seperate > div {width: 100%;}
 
-
+input.coco-form {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  border: solid 2px $blackd;
+  border-radius: 8px;
+  padding: 2px 7px;
+}
 /* radio, checkbox */
 input.option-input, 
 input.coco-form, 
@@ -589,14 +596,14 @@ select {
 	-o-appearance: none;
 	appearance: none;
 	position: relative;
-	top: 4px;
+	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	height: 17px;
 	width: 17px;
-	-webkit-transition: background 0.15s ease-out 0s;
-	transition: background 0.15s ease-out 0s;
+	-webkit-transition: background 0.1s ease-out 0s;
+	transition: background 0.1s ease-out 0s;
 	background: #cdd2d7;
 	border: none;
 	color: #fff;
@@ -611,7 +618,8 @@ select {
 .option-input:checked,
 input.option-input[type="radio"]:checked,
 input.option-input[type="checkbox"]:checked {
-	background: #1a776f;
+	background: $main12;
+	color: #fff !important;
 }
 .option-input:checked::before,
 input.option-input[type="radio"]:checked::before,
@@ -619,15 +627,15 @@ input.option-input[type="checkbox"]:checked::before {
 	height: 17px;
 	width: 17px;
 	position: absolute;
-	content: '\S';
+	content: '\2714';
 	top: 0.5px;
 	color: #fff !important;
 	display: inline-block;
 	font-size: 12px;
+  font-style: normal !important;
 	text-align: center;
 	line-height: 17px;
 	font-weight: 800;
-	font-family: "dripicons-v2";
 }
 .option-input:checked::after,
 input.option-input[type="radio"]:checked::after,
@@ -635,7 +643,7 @@ input.option-input[type="checkbox"]:checked::after {
 	-webkit-animation: click-wave 0.65s;
 	-moz-animation: click-wave 0.65s;
 	animation: click-wave 0.65s;
-	background: #40e0d0;
+	background: $main12;
 	content: '';
 	display: block;
 	position: relative;
@@ -694,7 +702,7 @@ input.option-input[type="checkbox"]:checked::after {
 	bottom: 100vh;
 	z-index: 1000;
 	opacity: 0;
-	background-color: #1a776f;
+	background-color: $main12;
 	width: 100vw;
 	height: 0;
 	-webkit-animation: cocoPageFadeIn 1s ease;

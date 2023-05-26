@@ -1,4 +1,4 @@
-extends layout/base
+extends layout/baseLayout
 include mixins/title.pug
 include mixins/songList.pug
 
@@ -26,15 +26,15 @@ block content
   div.main-chart-content-section.main-content
     h2.title 
       a(href="") 
-        span top 10 this week
+        span today's top 10
         i.fa-solid.fa-caret-right.fa-fw
-      //- div #{name1}
-      //- img(src="/public/client/img/default_paper.png",
-      //-   style=`background-image: url(${imageSm})`)
     div.main-chart-content.row 
       div.col-12.col-md-6
         each topTrack in topTracks1
-          +songList(topTrack)
-      //- div.col-12.col-md-6
-      //-   each topTrack in topTracks2
-      //-     +songList(topTrack)
+          +songList(topTrack, false)
+      div.col-12.col-md-6
+        each topTrack in topTracks2
+          +songList(topTrack, false)
+
+block scripts
+  

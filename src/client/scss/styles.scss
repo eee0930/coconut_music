@@ -8,7 +8,8 @@
 // Components
 @import "./components/cocoPlayer.scss";
 @import "./components/sidemenu.scss";
-@import "./components/title.scss";
+@import "./components/cocoBox.scss";
+@import "./components/trackList.scss";
 
 // Screens
 @import "./screens/home.scss";
@@ -47,6 +48,9 @@ main {
   display: none;
 }
 @media (min-width: 768px) {
+  .baseLayout-menu {
+    width: 250px;
+  }
   .coco-container {
     padding: $def-padding-md;
   }
@@ -54,7 +58,15 @@ main {
     max-height: calc(100vh - $player-h-md);
   }
 }
+@media (min-width: 992px) {
+  .baseLayout-menu {
+    width: 270px;
+  }
+}
 @media (min-width: 1200px) {
+  .baseLayout-menu {
+    width: 300px;
+  }
   .coco-container {
     padding: $def-padding;
   }
@@ -161,16 +173,13 @@ footer {
   }
 }
 
-.playlist-album-img {
-  width: 45px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: $main11;
-  border: none;
-  padding: 0;
+.likeBtn.liked .fa-solid.fa-heart {
+  color: $main12;
 }
-
+.likeBtn.active i {
+  color: $main12;
+  animation: bigToSmall 0.5s ease;
+}
 
 
 // jelly button
@@ -209,12 +218,25 @@ footer {
 }
 
 /* box dots animation */
+@-webkit-keyframes bURGXq {
+  0% {-webkit-transform: translate(0px, 0px);}
+  100% {-webkit-transform: translate(20px, 20px);}
+}
 @keyframes bURGXq {
-  0% {
-    transform: translate(0px, 0px);
-  }
+  0% {transform: translate(0px, 0px);}
+  100% {transform: translate(20px, 20px);}
+}
 
-  100% {
-    transform: translate(20px, 20px);
-  }
+/* big-> small (하투 애니메이션) */
+@-webkit-keyframes bigToSmall {
+	0%, 100% {-webkit-transform: scale(1);}
+	40% {-webkit-transform: scale(0.1);}
+	70%, 75% {-webkit-transform: scale(3);}
+	90% {-webkit-transform: scale(0.5);}
+}
+@keyframes bigToSmall {
+	0%, 100% {transform: scale(1);}
+	40% {transform: scale(0.1);}
+	70%, 75% {transform: scale(3);}
+	90% {transform: scale(0.5);}
 }
