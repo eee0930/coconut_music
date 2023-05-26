@@ -1,11 +1,29 @@
 import { nwkLoading, stopNwkLoading } from "../common";
 
 const $playCocos = document.querySelectorAll(".playCoco");
+const ALBUM_ROOT = "/album/";
+const ARTIST_ROOT = "/artist/";
+
+function displayPlayer($target) {
+  // [클릭한 트랙 정보]
+  const $trackElement = $target.closest(".trackElement");
+  const $albumImg = $trackElement.querySelector(".albumImg");
+  const $name = $trackElement.querySelector(".name");
+  const $artist = $trackElement.querySelector(".artist");
+  // 게스트인 경우 재생 시간을 30초로
+  const duration = $target.dataset.duration;
+
+  // [플레이어 정보]
+  const $cocoPlayer = document.querySelector("#cocoPlayerContainer");
+
+}
+
+
 
 let audio = null;  //음성 객체를 담을 변수
 let loopN = 0; //반복횟수
 let audioloadTimer;
-/*************************플레이어 재생************************************/
+/********************************[플레이어 재생]**********************************/
 /**
  * filUri: 재생할 파일을 요청할 uri
  * loopNum: 재생하려는 횟수.
@@ -132,5 +150,5 @@ for (var i = 0; i < musicCards.length; i++) {
 
 $playCocos.forEach(coco => {
   const playUri = coco.dataset.audio;
-  coco.addEventListener("click", () => playCoco(playUri, coco));
+  coco.addEventListener("click", () => playCoco(playUri, coco, 2));
 });

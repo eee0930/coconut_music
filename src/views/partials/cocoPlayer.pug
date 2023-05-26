@@ -1,4 +1,4 @@
-div.coco-player-container
+div#cocoPlayerContainer.coco-player-container
   //- [1. progress bar]---------------------------------------------------------
   div.progress-bar-section 
     div.progress-bar 
@@ -10,13 +10,14 @@ div.coco-player-container
       //- 앨범 이미지
       div.album-image.col-auto.align-self-center
         a(href="")
-          img.player-album-img(src="/public/client/img/default_paper.png", 
-            style="background-image: url(/public/client/img/test/idle.png)")
+          img(src="/public/client/img/default_paper.png", 
+            style="background-image: url(/public/client/img/test/idle.png)"
+            class="albumImg player-album-img")
       //- 노래 제목, 가수 이름
       div.info.col.col-md-auto.align-self-center 
-        div.name 
+        div.name-cover 
           a(href="") 퀸카 (QueenCard)
-        div.artist  
+        div.artist-cover  
           a(href="") 아이들
       //- 좋아요 (member)
       div.loginRequired.ect-button.col-md.mobile-hidden.align-self-center 

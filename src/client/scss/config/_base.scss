@@ -565,7 +565,14 @@ button:disabled {
 }
 .align-seperate > div {width: 100%;}
 
-
+input.coco-form {
+  width: 100%;
+  max-width: 250px;
+  height: 40px;
+  border: solid 2px $blackd;
+  border-radius: 8px;
+  padding: 2px 7px;
+}
 /* radio, checkbox */
 input.option-input, 
 input.coco-form, 

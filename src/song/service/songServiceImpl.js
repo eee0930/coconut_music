@@ -25,7 +25,8 @@ export const getTopTrackList = async (size) => {
     const album = track.album.title;
     const image = track.album.cover_small;
     const preview = track.preview;
-    return { rank, tid, alid, arid, name, artist, album, image, preview }
+    const duration = track.duration;
+    return { rank, tid, alid, arid, name, artist, album, image, preview, duration }
   };
   const topTracks = trackList.data
     .slice(0, size)

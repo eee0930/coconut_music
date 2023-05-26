@@ -9,6 +9,9 @@ import rootRouter from "./global/routers/rootRouter";
 import authRouter from "./member/routers/authRouter";
 import memberRouter from "./member/routers/memberRouter";
 import songRouter from "./song/routers/songRouter";
+import mixtapeRouter from "./album/routers/mixtapeRouter";
+import albumRouter from "./album/routers/albumRouter";
+import artistRouter from "./artist/routers/artistRouter";
 
 
 const app = express();
@@ -40,21 +43,24 @@ app.use("/public", express.static("src"));
 app.use("/", rootRouter);
 app.use("/auth", authRouter);
 app.use("/member", memberRouter);
-app.use("/music", songRouter);
+app.use("/song", songRouter);
+app.use("/album", albumRouter);
+app.use("/mixtape", mixtapeRouter);
+app.use("/artist", artistRouter);
 
-// app.use((req, res, next) => {
-//   res.status(404).render("error", {
-//     pageTitle: "에러",
-//     message: "페이지를 찾을 수 없습니다.",
-//   });
-// });
+app.use((req, res, next) => {
+  res.status(404).render("error", {
+    pageTitle: "에러",
+    message: "페이지를 찾을 수 없습니다.",
+  });
+});
 
-// app.use((err, req, res, next) => {
-//   console.error(`💥 에러 발생 \n ${err.stack}`);
-//   res.status(500).render("error", {
-//     pageTitle: "오류",
-//     message: "서버 오류가 발생하였습니다.",
-//   });
-// });
+app.use((err, req, res, next) => {
+  console.error(`💥 에러 발생 \n ${err.stack}`);
+  res.status(500).render("error", {
+    pageTitle: "오류",
+    message: "서버 오류가 발생하였습니다.",
+  });
+});
 
 export default app;

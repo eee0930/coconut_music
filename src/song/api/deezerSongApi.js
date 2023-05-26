@@ -32,7 +32,7 @@ export const fetchSearchResultsByQuery = async (query) => {
   const options = {
     method: METHOD,
     url: `${API_ROOT}search`,
-    params: {q: query},
+    params: { q: query },
     headers: HEADERS
   };
   return await fetchResponseData(options);

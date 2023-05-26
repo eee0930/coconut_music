@@ -1,18 +1,20 @@
 mixin songList(track, check)
-  div.track-ele-section
+  div.trackElement.track-ele-section
     div.track-ele-cover.row 
       if check
         div.checklist.col-auto.align-self-center
           input(type="checkbox", value=track.tid, name="trackList", class="option-input checkbox")
-      div.album-image.col-auto.align-self-center
+      div.albumImg.album-image.col-auto.align-self-center(data-alid=track.alid)
         img(src="/public/client/img/default_paper.png",
-          style=`background-image: url(${track.image})` class="playlist-album-img")
-        button(data-audio=track.preview, class="playCoco play-btn")
+          style=`background-image: url(${track.image})` 
+          class="playlist-album-img")
+        button(data-audio=track.preview, data-duration=track.duration 
+          class="playCoco play-btn")
           i.fa-solid.fa-play
       if track.rank 
         div.track-rank.col-auto.align-self-center #{track.rank}
       div.album-info.col.align-self-center
         div.name-cover  
-          a(href="") #{track.name}
+          a.name(href="") #{track.name}
         div.artist-cover 
-          a(href="") #{track.artist}
+          a.artist(href="") #{track.artist}
