@@ -3,7 +3,16 @@ html(lang="ko")
   head
     include ../partials/headIncl
   body
-    block content
+    div.auth-container 
+      div.auth-container-box
+        img.logo-img.jelly(src="/public/client/img/coco.png")
+        div.animation-box-cover
+          span.animation-box
+        div.auth-cover
+          div.title-cover
+            div.title 
+              a(href="/") coconut
+          block content
   script(src="/static/js/main.js") 
   script(src="/static/js/common.js") 
   script(src="/static/js/authMember.js") 

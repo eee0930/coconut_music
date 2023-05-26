@@ -2,24 +2,24 @@ extends ../layout/authLayout
 include ../mixins/title
 
 block content 
-  +title(title, "/")
   if errorMsg
     .errorMsg=errorMsg
+  div.form-contianer
+    form(method="POST")
+      .label 아이디
+      input.coco-form(name="memberId" id="memberId" placeholder="ID" type="text", 
+        required value=memberId autofocus)
 
-  form(method="POST")
-    .label 아이디
-    input.coco-form(name="memberId" id="memberId" placeholder="ID" type="text", 
-      required value=memberId autofocus)
+      .label 비밀번호
+      input.coco-form(name="password" id="password" placeholder="Password (4~15 characters)" 
+        type="password", required, minLength="4" maxLength="15" autocomplete="new-password")
 
-    .label 비밀번호
-    input.coco-form(name="password" id="password" placeholder="Password (4~15 characters)" 
-      type="password", required, minLength="4" maxLength="15" autocomplete="new-password")
+      .label 닉네임
+      input.coco-form(name="nickName" id="nickName" placeholder="Nickname" type="text", 
+        required value=nickName autofocus)
 
-    .label 닉네임
-    input.coco-form(name="nickName" id="nickName" placeholder="Nickname" type="text", 
-      required value=nickName autofocus)
-
-    button.button(type="submit") 
-      span.button-back 
-      span.button-front Join
+      div.button-section
+        button.button(type="submit") 
+          span.button-back 
+          span.button-front Join
 

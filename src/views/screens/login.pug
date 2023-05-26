@@ -2,23 +2,23 @@ extends ../layout/authLayout
 include ../mixins/title
 
 block content 
-  +title(title, "/")
   if errorMsg
     .errorMsg=errorMsg
+  div.form-contianer
+    form(method="POST")
+      .label ID
+      input.coco-form(name="memberId" id="memberId" placeholder="ID" type="text", 
+        required value=memberId autofocus)
 
-  form(method="POST")
-    .label ID
-    input.coco-form(name="memberId" id="memberId" placeholder="ID" type="text", 
-      required value=memberId autofocus)
+      .label Password
+      input.coco-form(name="password" id="password" placeholder="Password" 
+        type="password", required, minLength="4" maxLength="15" autocomplete="new-password")
 
-    .label Password
-    input.coco-form(name="password" id="password" placeholder="Password" 
-      type="password", required, minLength="4" maxLength="15" autocomplete="new-password")
+      div.button-section
+        button.button(type="submit") 
+          span.button-back 
+          span.button-front Log In 
 
-    button.button(type="submit") 
-      span.button-back 
-      span.button-front Log In 
-
-  div
-    span 아직 계정이 없다면? 
-    a(href="/auth/loin") 회원가입
+    div.login-admire
+      span 아직 계정이 없다면? 
+      a(href="/auth/join") 회원가입
