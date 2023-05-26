@@ -1,9 +1,10 @@
-[
+
+const mixTapeApi = [
   {
     "_id": "643f739c74e98811f8450e9e",
     "tapeImage": "/public/client/img/data/tape01.png",
     "title": "격렬하게 아무것도 안 하고 싶다",
-    "author": "lazyhysong",
+    "author": "coconut",
     "songList": [{
       "id": 1494078012,
       "name": "All Damn Day!",
@@ -77,7 +78,7 @@
     "_id": "643f739c74e98811f8450e6e",
     "tapeImage": "/public/client/img/data/tape03.png",
     "title": "없던 약속도 만들어야겠어",
-    "author": "lazyhysong",
+    "author": "hahah",
     "songList": [{
       "id": 1952725537,
       "name": "Pretty Girls Walk",
@@ -141,7 +142,7 @@
     "_id": "643f739c74e98811f8450e4e",
     "tapeImage": "/public/client/img/data/tape05.png",
     "title": "하루만 부잣집 고양이로 살고 싶다",
-    "author": "lazyhysong",
+    "author": "coconut",
     "songList": [{
       "id": 1584624932,
       "name": "Isn't This A Lovely Day",
@@ -164,4 +165,23 @@
       "preview": "https://cdns-preview-b.dzcdn.net/stream/c-bf71d7e8122210a0966ddcafb4fc458c-4.mp3"
     }]
   }
-]
+];
+
+
+export const getMixtapeList = (size) => {
+  let mixTapes = [...mixTapeApi];
+  if(size) {
+    mixTapes = mixTapeApi.slice(mixTapes.length - size);
+  }
+  return mixTapes;
+}
+
+export const getTrackListById = (id) => {
+  const tracklist = mixTapeApi.filter(mixtape => mixtape._id === id)[0].songList;
+  return tracklist;
+}
+
+export const getMixtapeById = (id) => {
+  const mixtape = mixTapeApi.filter(mixtape => mixtape._id === id)[0];
+  return mixtape;
+}

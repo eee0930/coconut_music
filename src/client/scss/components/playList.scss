@@ -1,3 +1,56 @@
 .playlist-section {
-  
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: calc($player-h-sm + $mobile-menu-h);
+  width: 100vw;
+  height: calc(100vh - $player-h-sm - $mobile-menu-h);
+  background-color: $main32;
+  z-index: 10;
+  transition: transform 0.5s ease;
+
+  .track-list-cover {
+    width: 100%;
+    height: calc(100vh - $player-h-sm - $mobile-menu-h);
+  }
+}
+
+@media(min-width: 768px) {
+  .playlist-section {
+    bottom: $player-h-md;
+    height: calc(100vh - $player-h-md);
+
+    .now-play-container {
+      height: calc(100vh - $player-h-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80%;
+        max-width: 450px;
+      }
+    } 
+
+    .track-list-cover {
+      background-color: $white;
+      height: calc(100vh - $player-h-md);
+    }
+  }
+
+}
+
+
+@media(min-width: 1200px) {
+  .playlist-section {
+    bottom: $player-h;
+    height: calc(100vh - $player-h);
+
+
+    .track-list-cover {
+      height: calc(100vh - $player-h);
+    }
+  }
 }

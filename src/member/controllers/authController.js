@@ -56,7 +56,8 @@ export const postLogin = async (req, res) => {
     password: password1,
     nickName: "coconut",
     createdAt: "2023-05-26",
-    playlist: {},
+    playlist: [],
+    achiveList: [],
   }
   const title = "coconut";
   const pageTitle = "Login"
@@ -65,6 +66,7 @@ export const postLogin = async (req, res) => {
   if(memberId === memberId1 && password === password1) {
     req.session.loggedIn = true;
     req.session.member = cocoMember;
+    req.session.playList = cocoMember.playlist;
     return res.redirect("/");
   } else {
     // 멤버 확인
@@ -94,6 +96,7 @@ export const postLogin = async (req, res) => {
     // 세션 저장 후 메인 페이지로 이동
     req.session.loggedIn = true;
     req.session.member = member;
+    req.session.playList = member.playlist;
 
     req.flash("ok", "환영합니다.");
     return res.redirect("/");

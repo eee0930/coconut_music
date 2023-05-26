@@ -1,0 +1,25 @@
+.mixtape-container {
+  padding: 8px;
+  padding-left: 0;
+  color: $blackd;
+  .image-section {margin-bottom: 5px;}
+  .image-section img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .title-section {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+  .author-section {
+    font-size: 0.8rem;
+    color: $blackl;
+  }
+}
