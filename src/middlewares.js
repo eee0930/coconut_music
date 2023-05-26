@@ -4,6 +4,7 @@ export const localsMiddleware = (req, res, next) => {
   res.locals.loggedIn = Boolean(req.session.loggedIn);
   res.locals.siteName = "Coconut Music";
   res.locals.loggedInUser = req.session.member || {};
+  res.locals.playList = req.session.playList || [];
   res.locals.pathName = req.path;
   next();
 };

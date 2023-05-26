@@ -1,1 +1,14 @@
+include ../mixins/songList.pug
+
 div#playListSection.playlist-section
+  div.row 
+    div.d-none.d-md-inline-block.col-md-6.col-lg-8
+      div.now-play-container
+        img.albumImgLg(src="https://e-cdns-images.dzcdn.net/images/cover/14ae5e519293803d00429ba2e401097c/1000x1000-000000-80-0-0.jpg")
+    div.col-12.col-md-6.col-lg-4
+      div.track-list-cover
+        if loggedIn 
+          each track in playList
+            +songList(track, false)
+        else 
+          div 하하..

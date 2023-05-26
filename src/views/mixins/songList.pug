@@ -9,6 +9,7 @@ mixin songList(track, check)
           style=`background-image: url(${track.image})` 
           class="playlist-album-img")
         input.imgSrc(type="hidden" value=track.image)
+        input.imgLgSrc(type="hidden" value=track.imageLg)
         button(data-audio=track.preview, data-duration=track.duration 
           class="playCoco play-btn")
           i.fa-solid.fa-play

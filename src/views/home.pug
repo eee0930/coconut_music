@@ -1,6 +1,7 @@
 extends layout/baseLayout
 include mixins/title.pug
 include mixins/songList.pug
+include mixins/mixtape.pug
 
 block content
   //- [mobile logo]
@@ -24,15 +25,17 @@ block content
   //- [1. mix tape]-------------------------------------------------------------
   div.main-box-content-section.main-content
     h2.title 
-      a(href="") 
-        span mix tape
+      a(href="/mixtape") 
+        span new mix tape
         i.fa-solid.fa-caret-right.fa-fw
-    div.main-box-content
+    div.main-box-content.row 
+      each tape in mixtapes
+        +mixtape(tape)
 
   //- [2. top 10]---------------------------------------------------------------
   div.main-chart-content-section.main-content
     h2.title 
-      a(href="") 
+      a(href="/chart") 
         span today's top 10
         i.fa-solid.fa-caret-right.fa-fw
     div.main-chart-content.row 

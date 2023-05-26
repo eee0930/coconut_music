@@ -1,6 +1,7 @@
 import { nwkLoading, stopNwkLoading } from "../common";
 
 const $loginStatus = document.querySelector('#loginStatus');
+const $playListSection = document.querySelector("#playListSection");
 const $cocoPlayBtn = document.querySelector("#cocoPlayBtn");
 const $cocoPlayUrl = document.querySelector("#cocoPlayUrl");
 const $progrss = document.querySelector("#playerProgress");
@@ -22,6 +23,7 @@ function displayPlayer($target) {
   const { tid } = $trackElement.dataset;
   const { alid } = $albumImg.dataset;
   const albumImg = $albumImg.querySelector(".imgSrc").value;
+  const albumImgLg = $albumImg.querySelector(".imgLgSrc").value;
   const trackUri = $target.dataset.audio;
   const { arid, name, artist } = $trackInfo.dataset;
   // 게스트인 경우 재생 시간을 30초로
@@ -31,6 +33,9 @@ function displayPlayer($target) {
   } else {
     duration = $target.dataset.duration;
   }
+
+  // [now play 이미지 변경]
+  $playListSection.querySelector(".albumImgLg").src = albumImgLg;
 
   // [플레이어 정보]
   const $cocoPlayer = document.querySelector("#cocoPlayerContainer");

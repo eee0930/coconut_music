@@ -38,24 +38,24 @@ div.sidemenu-contianer
           span.icon-cover
             i.fa-solid.fa-trophy 
           span 
-            a(href="/") chart 
+            a(href="/chart") chart 
         li 
           span.icon-cover
             i.fa-solid.fa-record-vinyl
           span 
-            a(href="/") mix tape
-        //- 보관함 (member) 
-        //- li 
-        //-   span.icon-cover
-        //-     i.fa-solid.fa-heart
-        //-   span 
-        //-     a(href="/") archive
+            a(href="/mixtape") mix tape
+        if loggedIn
+          li 
+            span.icon-cover
+              i.fa-solid.fa-heart
+            span 
+              a(href="/archive") archive
         li 
           span.icon-cover
             i.fa-solid.fa-bars
             i.fa-solid.fa-music
           span 
-            a(href="/") play list
+            a(href="#") play list
       
       div.search-section 
         div.search-cover

@@ -1,0 +1,10 @@
+extends ../layout/baseLayout 
+include ../mixins/mixtape.pug
+
+block content 
+  div.main-box-content-section.main-content
+    h2.title 
+      span mix tape
+    div.main-box-content.row 
+      each tape in mixtapeList
+        +mixtape(tape)

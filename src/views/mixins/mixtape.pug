@@ -1,0 +1,9 @@
+mixin mixtape(tape)
+  div.col-6.col-md-3 
+    div.mixtape-container 
+      div.image-section 
+        a(href=`/mixtape/${tape._id}`)
+          img(src="/public/client/img/default_paper.png",
+            style=`background-image: url(${tape.tapeImage})`)
+      div.title-section #{tape.title}
+      div.author-section #{tape.author}

@@ -1,8 +1,9 @@
 import express from "express";
-import { getMixtapeInfo } from "../controllers/mixtapeController";
+import { mixtapeList, getMixtapeInfo } from "../controllers/mixtapeController";
 
 const mixtapeRouter = express.Router();
 
-mixtapeRouter.get(":id", getMixtapeInfo);
+mixtapeRouter.get("/", mixtapeList);
+mixtapeRouter.get("/:id", getMixtapeInfo);
 
 export default mixtapeRouter;
