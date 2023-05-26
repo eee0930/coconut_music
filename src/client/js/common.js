@@ -45,12 +45,11 @@ export function previewImagefile(e){
  * @returns 
  */
 function handleLogin(e) {
-  if($loginStatus.innerHTML.length > 1 || 
-    $loginStatus.innerHTML  === "true"){
+  if($loginStatus.value === "true"){
     return;
   } else {
     e.preventDefault();
-    location.href = `/auth/login?destPage=${window.location.href}`;
+    location.href = `/auth/login?destPage=${window.location.pathname}`;
   }
 }
 

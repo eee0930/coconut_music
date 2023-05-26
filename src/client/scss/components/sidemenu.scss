@@ -10,7 +10,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      img {
+      img.logo-img {
         position: absolute;
         top: -1.2rem;
         right: -2.5rem;
@@ -65,16 +65,56 @@
       margin-bottom: 1.5rem;
     }
     .user-cover {
+      color: $blackd;
       padding: 0.2rem 0;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       .profile {
-        width: 50px;
+        width: 45px;
       }
-      img {width: 100%;}
+      img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
       .nickname {
         padding-left: 0.8rem;
-        color: $white;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .dropdown-btn {
+        background-color: transparent;
+        border: none;
+        padding: 5px 8px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .drop-down-menu {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 50px;
+        left: -70px;
+        width: 80px;
+        height: 30px;
+        padding: 0;
+        background-color: $white;
+        border-radius: 5px;
+        text-align: center;
+        transform: translateX(50%);
+        button {
+          background-color: transparent;
+          border: none;
+          padding: 5px;
+          font-size: 1rem;
+        }
+      }
+      .drop-down-menu.active {
+        opacity: 1;
+        top: 25px;
+        display: block;
       }
     }
     .login-cover {
@@ -227,4 +267,5 @@
     letter-spacing: -0.05em;
     text-transform: uppercase;
   }
+  
 }

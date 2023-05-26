@@ -1,6 +1,5 @@
 import Member from "../models/Member";
 import Song from "../../song/models/Song";
-import PlayList from "../../song/models/PlayList";
 
 export const getPlayListArchive = async (req, res) => {
   const pageTitle = "Archive";
@@ -15,15 +14,15 @@ export const getPlayListArchive = async (req, res) => {
   if (!member) return res.redirect("/");
 
   // 좋아요 누른 곡
-  const likes = member.likes;
-  const songs = await Song.find({ likes: { $in: likes } })
-    .populate("likes")
+  const achives = member.achiveList;
+  const songs = await Song.find({ achives: { $in: achives } })
+    .populate("achives")
     .sort({ views: "desc" });
 
   let likeSongs = songs.map(song => ({
     song,
-    isLiked: song.likes?.filter((like) => 
-      String(like.member._id) === mid)
+    isLiked: song.achives?.filter((achive) => 
+      String(achive.member._id) === mid)
       .length === 1 ? true : false,
   }));
 

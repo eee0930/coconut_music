@@ -1,31 +1,20 @@
 import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema({
-  sid: { type: String, required: true },
+  tid: { type: Number, required: true },
   name: { type: String, required: true },
+  arid: { type: Number, required: true },
   artist: { type: String, required: true },
-  title: {
-    type: String,
-    required: true,
-    default: function () {
-      return this.artist + " 앨범";
-    },
-  },
+  preview: { type: String, required: true },
   coverUrl: {
     type: String,
     required: true,
     default: function () {
-      return `https://img.youtube.com/vi/${this.youtubeId}/sddefault.jpg`;
+      return "/public/client/img/default_profile.jpg";
     },
   },
-  playTime: { type: Number, required: true },
-  releasedAt: {
-    type: Date,
-    required: true,
-    default: Date.now(),
-  },
-  createdAt: { type: Date, required: true, default: Date.now },
-  playCount: String,
+  alid: { type: Number, required: true },
+  duration: { type: Number, required: true },
   youtubeId: { type: String, required: true, unique: true },
 });
 

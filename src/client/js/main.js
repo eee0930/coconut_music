@@ -1,7 +1,8 @@
 import "../scss/styles.scss";
 
 const $likeBtn = document.querySelectorAll(".likeBtn");
-
+const $dropdown = document.querySelector(".dropdown-section");
+const $dropdownBtn = document.querySelector("#dropdownBtn");
 
 const handleClickLikeBtn = (target, tid) => {
   const $target = target;
@@ -23,12 +24,23 @@ const handleClickLikeBtn = (target, tid) => {
   }
 }
 
+const toggleDropdown = () => {
+  const $menu = $dropdown.querySelector(".drop-down-menu");
+  if($menu.classList.contains("active")) {
+    $menu.classList.remove("active");
+  } else {
+    $menu.classList.add("active");
+  }
+}
+
+
 $likeBtn.forEach($btn => {
   const tid = $btn.dataset.tid;
   $btn.addEventListener("click", () => handleClickLikeBtn($btn, tid));
 });
 
 
+$dropdownBtn.addEventListener("click", toggleDropdown);
 
 // $btn.forEach((value) => {
 //   const youtubeId = value.getAttribute("data-youtube-id");

@@ -10,9 +10,16 @@ block content
         img(src="/public/client/img/coco.png")
         span coconut
       div.member-cover.col-auto.align-self-center
-        a(href="")
-          img(src="/public/client/img/default_paper.png",
-            style="background-image: url(/public/client/img/default_profile.jpg)")
+        if loggedIn
+          form(method="POST", action="/auth/logout")
+            button.logout-btn(type="submit")
+              img(src="/public/client/img/default_paper.png",
+                style="background-image: url(/public/client/img/default_profile.jpg)")
+              div.nickname #{loggedInUser.nickName}
+        else 
+          a.button(href="/auth/login") 
+            span.button-back 
+            span.button-front LogIn
 
   //- [1. mix tape]-------------------------------------------------------------
   div.main-box-content-section.main-content
