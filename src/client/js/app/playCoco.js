@@ -162,6 +162,7 @@ function playCoco(loopNum){
     } else {  // 반복 재생이 끝나면 
       if($cocoPlayBtn !== undefined && $cocoPlayBtn.classList.contains('audioActive')){
         togglePlayIcon(false);
+        stopProgress();
       }
       audio = null; // 다시 눌렀을 때 재생하기 위해 null로 초기화.
     }

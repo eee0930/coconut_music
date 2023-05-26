@@ -22,6 +22,18 @@
       background-repeat: no-repeat;
     }
   }
+  .logout-btn {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    max-width: 80px;
+    .nickname {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+  }
 }
 
 .main-content {

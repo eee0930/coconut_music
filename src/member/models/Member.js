@@ -2,23 +2,12 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
 const memberSchema = new mongoose.Schema({
-  mid: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
+  memberId: { type: String, required: true, unique: true },
+  nickName: { type: String, required: true, unique: true },
   password: { type: String, required: true, minLength: 4 },
-  name: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 10,
-    default: function () {
-      return this.email.split("@")[0].substring(0, 10);
-    },
-  },
-  avatarUrl: { type: String, required: true },
   createdAt: { type: Date, required: true, default: Date.now },
-  playlists: [
-    { type: mongoose.Schema.Types.ObjectId, required: true, ref: "Playlist" },
-  ],
+  playlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Song" }],
+  achiveList: [{ type: mongoose.Schema.Types.ObjectId, ref: "Song" }],
 });
 
 memberSchema.pre("save", async function () {

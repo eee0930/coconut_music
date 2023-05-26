@@ -3,7 +3,10 @@ html(lang="ko")
   head
     include ../partials/headIncl
   body
-    input#loginStatus(type="hidden" value=false)
+    if loggedIn
+      input#loginStatus(type="hidden" value="true")
+    else
+      input#loginStatus(type="hidden" value="false")
     div.row 
       div.baseLayout-menu.col-md-auto.d-none.d-md-inline-block
         include ../partials/sideMenu
@@ -11,15 +14,17 @@ html(lang="ko")
         main.coco-container
           block content
         include ../partials/footer
+        
+    //- hidden section
+    div.hidden-section
+      include ../partials/playList
+
     include ../partials/cocoPlayer
     
     div.d-md-none
       include ../partials/mobileMenu
 
-    //- hidden section
-    div.hidden-section
-      include ../partials/playList
-      include ../partials/nowPlay
+    
   script(src="/static/js/main.js") 
   script(src="/static/js/common.js") 
   script(src="/static/js/playCoco.js") 

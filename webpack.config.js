@@ -8,6 +8,7 @@ module.exports = {
     main: BASE_JS + "main.js",
     common: BASE_JS + "common.js",
     playCoco: BASE_JS + "app/playCoco.js",
+    authMember: BASE_JS + "app/authMember.js",
   },
   plugins: [
     new MiniCssExtractPlugin({
