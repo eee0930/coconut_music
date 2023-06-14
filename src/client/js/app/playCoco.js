@@ -174,7 +174,6 @@ function playCoco(loopNum){
   }
   let timeout;
   const handleEnded = () => {
-    // audio.currentTime = 0;
     clearTimeout(timeout);
     timeout = setTimeout(handleTimeout, 800);
   }
